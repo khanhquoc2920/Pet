@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import Cart from '../API/CartAPI';
 import User from '../API/User';
-import logo from '../Image/1.jpg'
+import logo from '../Image/ab.png'
 import { addUser, deleteCart } from '../Redux/Action/ActionCart';
 import { changeCount } from '../Redux/Action/ActionCount';
 import { addSession, deleteSession } from '../Redux/Action/ActionSession';
@@ -156,7 +156,7 @@ function Header(props) {
 
             // gender = male
             const params_male = {
-                gender: 'male'
+                gender: 'Thú cưng'
             }
 
             const query_male = '?' + queryString.stringify(params_male)
@@ -167,7 +167,7 @@ function Header(props) {
 
             // gender = female
             const params_female = {
-                gender: 'female'
+                gender: 'Phụ kiện'
             }
 
             const query_female = '?' + queryString.stringify(params_female)
@@ -236,7 +236,7 @@ function Header(props) {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-3 col-md-4">
-                            <li><span>Telephone Enquiry:</span><a href="#">(+123) 123 321 345</a></li>
+                            <li><span>Đường dây nóng</span><a href="#">(+123) 123 321 345</a></li>
                         </div>
                         <div className="col-lg-9 col-md-8">
                             <ul className="d-flex justify-content-end" >
@@ -253,20 +253,20 @@ function Header(props) {
                                                     data-toggle="collapse"
                                                     data-target="#collapseExample"
                                                     aria-expanded="false"
-                                                    aria-controls="collapseExample">Setting</span>
+                                                    aria-controls="collapseExample">Cài đặt</span>
                                             )
                                         }
                                     </div>
                                     <div className="ul_setting">
                                         {active_user ? (
                                             <ul className="setting_ul collapse" id="collapseExample">
-                                                <li className="li_setting"><Link to={`/profile/${sessionStorage.getItem("id_user")}`}>Profile</Link></li>
-                                                <li className="li_setting"><Link to="/history">Order Status</Link></li>
-                                                <li className="li_setting"><a onClick={handler_logout} href="#">Log Out</a></li>
+                                                <li className="li_setting"><Link to={`/profile/${sessionStorage.getItem("id_user")}`}>Hồ sơ</Link></li>
+                                                {/* <li className="li_setting"><Link to="/history">Order Status</Link></li> */}
+                                                <li className="li_setting"><a onClick={handler_logout} href="#">Đăng xuất</a></li>
                                             </ul>
                                         ) : (
                                             <ul className="setting_ul collapse" id="collapseExample">
-                                                <li className="li_setting"><Link to="/signin">Sign In</Link></li>
+                                                <li className="li_setting"><Link to="/signin">Đăng nhập</Link></li>
                                             </ul>
                                         )}
 
@@ -281,15 +281,15 @@ function Header(props) {
                 <div className="container pb_header">
                     <div className="row">
                         <div className="col-lg-3">
-                            <div className="logo pb-sm-30 pb-xs-30">
+                            <div className="logo pb-sm-20 pb-xs-20">
                                 <Link to="/">
-                                    <img src={logo} style={{ width: '13rem' }} />
+                                    <img src={logo} style={{ width: '7rem' }} />
                                 </Link>
                             </div>
                         </div>
                         <div className="col-lg-9 pl-0 ml-sm-15 ml-xs-15 d-flex justify-content-between">
                             <form action="/search" className="hm-searchbox" onSubmit={handler_search}>
-                                <input type="text" placeholder="Enter your search key ..." value={keyword_search} onChange={(e) => set_keyword_search(e.target.value)} />
+                                <input type="text" placeholder="Tìm kiếm sản phẩm ...." value={keyword_search} onChange={(e) => set_keyword_search(e.target.value)} />
                                 <button className="li-btn" type="submit"><i className="fa fa-search"></i></button>
                                 {
                                     keyword_search && <div className="show_search_product">
@@ -335,7 +335,7 @@ function Header(props) {
                                                                 </Link>
                                                                 <div className="minicart-product-details">
                                                                     <h6><a>{value.name_product}</a></h6>
-                                                                    <span>{new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(value.price_product)+ ' VNĐ'} x {value.count}, {value.size}</span>
+                                                                    <span>{new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(value.price_product)+ ' VNĐ'} x {value.count}</span>
                                                                 </div>
                                                                 <a className="close" onClick={() => handler_delete_mini(value.id_cart)}>
                                                                     <i className="fa fa-close"></i>
@@ -344,10 +344,10 @@ function Header(props) {
                                                         ))
                                                     }
                                                 </ul>
-                                                <p className="minicart-total">SUBTOTAL: <span>{new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(total_price)+ ' VNĐ'}</span></p>
+                                                <p className="minicart-total">Tổng tiền: <span>{new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(total_price)+ ' VNĐ'}</span></p>
                                                 <div className="minicart-button">
                                                     <Link to="/cart" className="li-button li-button-fullwidth li-button-dark">
-                                                        <span>View Full Cart</span>
+                                                        <span>Xem giỏ hàng</span>
                                                     </Link>
                                                 </div>
                                             </div>
@@ -366,10 +366,10 @@ function Header(props) {
                                     <nav>
                                         <ul>
 
-                                            <li className="dropdown-holder"><Link to="/">Home</Link></li>
+                                            <li className="dropdown-holder"><Link to="/">Trang chủ</Link></li>
                                             <li className="megamenu-holder"><Link to="/shop/all">Menu</Link>
                                                 <ul class="megamenu hb-megamenu">
-                                                    <li><Link to="/shop/all">Male</Link>
+                                                    <li><Link to="/shop/all">Thú cưng</Link>
                                                         <ul>
                                                             {
                                                                 male && male.map(value => (
@@ -380,21 +380,19 @@ function Header(props) {
                                                             }
                                                         </ul>
                                                     </li>
-                                                    <li><Link to="/shop">Female</Link>
+                                                    <li><Link to="/shop">Phụ kiện</Link>
                                                         <ul>
-                                                            {
-                                                                female && female.map(value => (
-                                                                    <li key={value._id}>
-                                                                        <Link to={`/shop/${value._id}`} style={{ cursor: 'pointer' }}>{value.category}</Link>
-                                                                    </li>
-                                                                ))
-                                                            }
+                                                           <li style={{color :'#a5a5a5'}}>Thức ăn</li>
+                                                           <li style={{color :'#a5a5a5'}}>Quần Áo</li>
+                                                           <li style={{color :'#a5a5a5'}}>Thực phẩm chức năng</li>
+                                                           <li style={{color :'#a5a5a5'}} >Phụ kiện đi kèm</li>
+                                                           <li style={{color :'#a5a5a5'}}>Đồ trang trí</li>
                                                         </ul>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li><Link to="/event">Event</Link></li>
-                                            <li><Link to="/contact">Contact</Link></li>
+                                            <li><Link to="/event">Ưu đãi</Link></li>
+                                            <li><Link to="/contact">Liên hệ</Link></li>
                                         </ul>
 
                                     </nav>

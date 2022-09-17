@@ -13,7 +13,7 @@ import Detail_OrderAPI from '../API/Detail_OrderAPI';
 import CouponAPI from '../API/CouponAPI';
 import MoMo from './MoMo.jsx'
 
-const socket = io('https://hieusuper20hcm.herokuapp.com/', {
+const socket = io('', {
     transports: ['websocket'], jsonp: false
 });
 socket.connect();
@@ -270,7 +270,7 @@ function Checkout(props) {
 
     const [error_address, set_error_address] = useState(false)
 
-    const [from, set_from] = useState('155 Sư Vạn Hạnh, Phường 13, District 10, Ho Chi Minh City, Vietnam')
+    const [from, set_from] = useState('172 Trần Phú , Thừa Thiên Huế')
 
     // Khoảng cách
     const [distance, set_distance] = useState('')
@@ -358,11 +358,11 @@ function Checkout(props) {
                         <div className="row">
                             <div className="col-lg-6 col-12 pb-5">
                                 <div className="checkbox-form">
-                                    <h3>Check Distance</h3>
+                                    <h3>Địa chỉ</h3>
                                     <div className="row">
                                         <div className="col-md-12">
                                             <div className="checkout-form-list">
-                                                <label>From <span className="required">*</span></label>
+                                                <label>Từ <span className="required">*</span></label>
                                                 <input type="text" name="from"
                                                     id="from_places"
                                                     disabled="true"
@@ -373,17 +373,17 @@ function Checkout(props) {
                                         </div>
                                         <div className="col-md-12">
                                             <div className="checkout-form-list">
-                                                <label>To <span className="required">*</span></label>
+                                                <label>Đến <span className="required">*</span></label>
                                                 <input type="text"
                                                     id="to_places"
-                                                    placeholder="Enter A Location"
+                                                    placeholder="Nhập địa chỉ của bạn"
                                                     value={information.address}
                                                     onChange={onChangeAddress} />
-                                                {error_address && <span style={{ color: 'red' }}>* Address is required</span>}
-                                                <input id="destination" type="text" name="destination" required="" type="hidden" />
+                                                {error_address && <span style={{ color: 'red' }}>* Địa chỉ sai</span>}
+                                                <input id="destination"  name="destination" required="" type="hidden" />
                                             </div>
                                         </div>
-                                        <div className="col-md-12">
+                                         {/* <div className="col-md-12">
                                             <div className="checkout-form-list">
                                                 <div className="form-group">
                                                     <label>
@@ -396,19 +396,19 @@ function Checkout(props) {
                                                     </select>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>  */}
                                         <div className="col-md-12">
                                             <div id="result" className="hide">
                                                 <div>
-                                                    <label htmlFor="Kilometers">Kilometers: </label>&nbsp;
+                                                    <label htmlFor="Kilometers">Số Km: </label>&nbsp;
                                                         <label id="in_kilo"></label>
                                                 </div>
                                                 <div>
-                                                    <label htmlFor="Duration">Duration: </label>&nbsp;
+                                                    <label htmlFor="Duration">Giờ giao hàng: </label>&nbsp;
                                                         <label id="duration_text"></label>
                                                 </div>
                                                 <div>
-                                                    <label htmlFor="Price">Shipping Cost: </label>&nbsp;
+                                                    <label htmlFor="Price">Phí giao hàng : </label>&nbsp;
                                                         <label id="price_shipping"></label>
                                                         &nbsp;<label>VNĐ</label>
                                                 </div>
@@ -416,13 +416,13 @@ function Checkout(props) {
                                         </div>
                                         <div className="col-md-12">
                                             <div className="order-button-payment">
-                                                <input value="CHECKING" type="submit" id="distance_form" />
+                                                <input value="Kiểm tra" type="submit" id="distance_form" />
                                             </div>
                                         </div>
                                         <div className="col-md-12">
                                             <div className="d-flex justify-content-end">
                                                 <div className="order-button-payment">
-                                                    <input value="Next" onClick={handler_Next} id="distance_next" type="submit" style={{ padding: '.4rem 1.6rem' }} />
+                                                    <input value="Tiếp tục" onClick={handler_Next} id="distance_next" type="submit" style={{ padding: '.4rem 1.6rem' }} />
                                                 </div>
                                             </div>
                                         </div>
@@ -441,11 +441,11 @@ function Checkout(props) {
                             <div className="col-lg-6 col-12 pb-5">
                                 <form onSubmit={handleSubmit(handler_Checkout)}>
                                     <div className="checkbox-form">
-                                        <h3>Billing Details</h3>
+                                        <h3>Chi tiết đơn hàng</h3>
                                         <div className="row">
                                             <div className="col-md-12">
                                                 <div className="checkout-form-list">
-                                                    <label>Full Name <span className="required">*</span></label>
+                                                    <label>Họ tên <span className="required">*</span></label>
                                                     <input placeholder="Enter Fullname" type="text" name="fullname"
                                                         ref={register({ required: true })}
                                                         value={information.fullname}
@@ -455,7 +455,7 @@ function Checkout(props) {
                                             </div>
                                             <div className="col-md-12">
                                                 <div className="checkout-form-list">
-                                                    <label>Phone Number <span className="required">*</span></label>
+                                                    <label>Số điện thoại <span className="required">*</span></label>
                                                     <input placeholder="Enter Phone Number" type="text" name="phone"
                                                         ref={register({ required: true })}
                                                         value={information.phone}
@@ -465,7 +465,7 @@ function Checkout(props) {
                                             </div>
                                             <div className="col-md-12">
                                                 <div className="checkout-form-list">
-                                                    <label>Address <span className="required">*</span></label>
+                                                    <label>Địa chỉ <span className="required">*</span></label>
                                                     <input placeholder="Street address" type="text" name="address"
                                                         ref={register({ required: true })}
                                                         value={information.address}
@@ -489,7 +489,7 @@ function Checkout(props) {
                                                     {
                                                         redirect && <Redirect to="/success" />
                                                     }
-                                                    <input value="Place order" type="submit" />
+                                                    <input value="Đặt hàng" type="submit" />
                                                 </div>
                                             </div>
                                         </div>
@@ -503,8 +503,8 @@ function Checkout(props) {
                                         <table className="table">
                                             <thead>
                                                 <tr>
-                                                    <th className="cart-product-name">Product</th>
-                                                    <th className="cart-product-total">Total</th>
+                                                    <th className="cart-product-name">Sản phẩm</th>
+                                                    <th className="cart-product-total">Tổng tiền</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -519,21 +519,21 @@ function Checkout(props) {
                                             </tbody>
                                             <tfoot>
                                                 <tr className="cart-subtotal">
-                                                    <th>Shipping Cost</th>
+                                                    <th>Phí ship</th>
                                                     <td><span className="amount">{new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(price) + ' VNĐ'}</span></td>
                                                 </tr>
                                                 <tr className="cart-subtotal">
-                                                    <th>Discount</th>
+                                                    <th>Giá giảm</th>
                                                     <td><span className="amount">{new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(discount) + ' VNĐ'}</span></td>
                                                 </tr>
                                                 <tr className="order-total">
-                                                    <th>Order Total</th>
+                                                    <th> Tổng tiền thanh toán</th>
                                                     <td><strong><span className="amount">{new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(total_price) + ' VNĐ'}</span></strong></td>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
-                                    <div className="payment-method">
+                                    {/* <div className="payment-method">
                                         <div className="payment-accordion">
                                             <div id="accordion">
                                                 <div className="card">
@@ -589,7 +589,7 @@ function Checkout(props) {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

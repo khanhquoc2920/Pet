@@ -98,7 +98,7 @@ function CreateUser(props) {
                     <div className="col-12">
                         <div className="card">
                             <div className="card-body">
-                                <h4 className="card-title">Create User</h4>
+                                <h4 className="card-title">Thêm thành viên</h4>
                                 {
                                     validationMsg.api === "Bạn đã thêm thành công" ?
                                         (
@@ -117,13 +117,13 @@ function CreateUser(props) {
 
                                 <form onSubmit={handleSubmit(handleCreate)}>
                                     <div className="form-group w-50">
-                                        <label htmlFor="name">Name:</label>
+                                        <label htmlFor="name">Tên:</label>
                                         <input type="text" className="form-control" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} required />
                                         <p className="form-text text-danger">{validationMsg.name}</p>
                                     </div>
 
                                     <div className="form-group w-50">
-                                        <label htmlFor="username">Username:</label>
+                                        <label htmlFor="username">Tên đăng nhập:</label>
                                         <input type="text" className="form-control" id="username" name="username" value={username} onChange={(e) => setUserName(e.target.value)} required />
                                         <p className="form-text text-danger">{validationMsg.username}</p>
                                     </div>
@@ -135,7 +135,7 @@ function CreateUser(props) {
                                     </div>
 
                                     <div className="form-group w-50">
-                                        <label htmlFor="password">Password:</label>
+                                        <label htmlFor="password">Mật khẩu:</label>
                                         <input type="password" className="form-control" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                                         <p className="form-text text-danger">{validationMsg.password}</p>
                                     </div>
@@ -152,7 +152,7 @@ function CreateUser(props) {
                                         </select>
                                         <p className="form-text text-danger">{validationMsg.permission}</p>
                                     </div>
-                                    <button type="submit" className="btn btn-primary">Create</button>
+                                    <button type="submit" className="btn btn-primary">Thêm</button>
                                 </form>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import Logoicon from '../Image/logo-icon.png'
-import Logotext from '../Image/logo-text.png'
+import Logoicon from '../Image/aa.png'
+
 import Logolight from '../Image/logo-light-text.png'
 import { AuthContext } from '../context/Auth'
 
@@ -17,13 +17,13 @@ function Header(props) {
                                     className="ti-menu ti-close"></i></a>
                                 <div className="navbar-brand">
                                     <a href="index.html">
-                                        <b className="logo-icon">
-                                            <img src={Logoicon} alt="homepage" className="dark-logo" />
-                                            <img src={Logoicon} alt="homepage" className="light-logo" />
+                                        <b className="logo-icon" >
+                                            <br></br>
+                                            <img src={Logoicon} alt="homepage" className="dark-logo" width={150}/>
+                                          
                                         </b>
                                         <span className="logo-text">
-                                            <img src={Logotext} alt="homepage" className="dark-logo" />
-                                            <img src={Logolight} className="light-logo" alt="homepage" />
+                                         
                                         </span>
                                     </a>
                                 </div>

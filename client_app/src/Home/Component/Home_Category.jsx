@@ -92,16 +92,16 @@ function Home_Category(props) {
                             <div className="col-lg-12 animate__animated animate__zoomIn col_product" style={{ zIndex: '999', height: '30rem' }} key={value._id}>
                                 <div className="single-product-wrap">
                                     <div className="product-image">
-                                        <Link to={`/detail/${value.id_product._id}`}>
-                                            <img src={value.id_product.image} alt="Li's Product Image" />
-                                        </Link>
+                                        {/* <Link to={`/detail/${value.id_product._id}`}> */}
+                                            <img src="https://kinpetshop.com/wp-content/uploads/z3511739235601_4524c6515b393962e260d283c1d51dff.jpg"  alt="Li's Product Image" style={{witdh:'300px',height:'130px'}}/>
+                                        {/* </Link> */}
                                         <span className="sticker">-{value.promotion}%</span>
                                     </div>
                                     <div className="product_desc">
                                         <div className="product_desc_info">
                                             <div className="product-review">
                                                 <h5 className="manufacturer">
-                                                    <a href="shop-left-sidebar.html">{value.id_product.name_product}</a>
+                                                    {/* <a href="shop-left-sidebar.html">{value.id_product.name_product}</a> */}
                                                 </h5>
                                                 <div className="rating-box">
                                                     <ul className="rating">
@@ -114,10 +114,10 @@ function Home_Category(props) {
                                                 </div>
                                             </div>
                                             <div className="d-flex justify-content-between price-box">
-                                                <del className="new-price">{new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(value.id_product.price_product)+ ' VNĐ'}</del>
+                                                {/* <del className="new-price">{new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(value.id_product.price_product)+ ' VNĐ'}</del> */}
                                                 <span className="new-price" style={{ color: 'red' }}>
-                                                    {new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'})
-                                                    .format(parseInt(value.id_product.price_product) - ((parseInt(value.id_product.price_product) * parseInt(value.promotion)) / 100)) + ' VNĐ'}
+                                                    {/* {new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'})
+                                                    .format(parseInt(value.id_product.price_product) - ((parseInt(value.id_product.price_product) * parseInt(value.promotion)) / 100)) + ' VNĐ'} */}
                                                 </span>
                                             </div>
                                         </div>
@@ -126,7 +126,7 @@ function Home_Category(props) {
                                                 <li><a href="#" title="quick view"
                                                     className="links-details"
                                                     data-toggle="modal"
-                                                    data-target={`#${value.id_product._id}`}
+                                                    // data-target={`#${value.id_product._id}`}
                                                     onClick={() => GET_id_modal(`${value.id_product._id}`, parseInt(value.id_product.price_product) - ((parseInt(value.id_product.price_product) * parseInt(value.promotion)) / 100))}><i className="fa fa-eye"></i></a></li>
                                             </ul>
                                         </div>

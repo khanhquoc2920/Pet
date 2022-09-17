@@ -63,21 +63,21 @@ function Coupon(props) {
                     <div className="col-12">
                         <div className="card">
                             <div className="card-body">
-                                <h4 className="card-title">Coupons</h4>
+                                <h4 className="card-title">Khuyến mãi</h4>
                                 <Search handlerSearch={handlerSearch} />
 
-                                <Link to="/coupon/create" className="btn btn-primary my-3">New create</Link>
+                                <Link to="/coupon/create" className="btn btn-primary my-3">Thêm mới</Link>
 
                                 <div className="table-responsive">
                                     <table className="table table-striped table-bordered no-wrap">
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
-                                                <th>Code</th>
-                                                <th>Count</th>
-                                                <th>Promotion</th>
-                                                <th>Describe</th>
-                                                <th>Edit</th>
+                                                <th>Mã</th>
+                                                <th>Số lượng</th>
+                                                <th>Khuyến mãi</th>
+                                                <th>Mô tả</th>
+                                                <th>Sửa</th>
                                             </tr>
                                         </thead>
 
@@ -92,9 +92,9 @@ function Coupon(props) {
                                                         <td>{value.describe}</td>
                                                         <td>
                                                             <div className="d-flex">
-                                                                <Link to={"/coupon/" + value._id} className="btn btn-success mr-1">Update</Link>
+                                                                <Link to={"/coupon/" + value._id} className="btn btn-success mr-1">Cập nhật</Link>
 
-                                                                <button type="button" style={{ cursor: 'pointer', color: 'white' }} onClick={() => handleDelete(value._id)} className="btn btn-danger" >Delete</button>
+                                                                <button type="button" style={{ cursor: 'pointer', color: 'white' }} onClick={() => handleDelete(value._id)} className="btn btn-danger" >Xóa</button>
                                                             </div>
                                                         </td>
                                                     </tr>

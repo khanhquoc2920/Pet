@@ -92,7 +92,7 @@ function Home(props) {
                         <div>
                             <div className="carousel-inner">
                                 <div className="single-slide align-center-left animation-style-01 bg-1"
-                                    style={{ backgroundImage: `url(https://cdn.shopify.com/s/files/1/2598/6284/files/3rd_Banner_5_1600x.jpg?v=1593522251)` }}>
+                                    style={{ backgroundImage: `url(https://saupetshop.vn/wp-content/uploads/2021/08/anh-trang-chu-2.jpg)` }}>
                                     <div className="slider-progress"></div>
 
                                 </div>
@@ -103,12 +103,12 @@ function Home(props) {
                     <div className="col-lg-4 col-md-4 text-center pt-xs-30">
                         <div className="li-banner">
                             <a href="#">
-                                <img src="https://img3.thuthuatphanmem.vn/uploads/2019/10/14/banner-fashion_113854663.jpg" alt="" />
+                                <img src="https://meocun.com/wp-content/uploads/banner_col_2.png" alt="" />
                             </a>
                         </div>
                         <div className="li-banner mt-15 mt-sm-30 mt-xs-30">
                             <a href="#">
-                                <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/114148366/original/624c3d3004215425a321fa7378f0228beb349e65/do-shopify-store-banner-header-and-slider-image-design-1906.png" alt="" />
+                                <img src="https://mew.vn/wp-content/uploads/2021/04/banner-danh-muc-thuc-an-cho-cho-2.jpg" alt="" />
                             </a>
                         </div>
                     </div>
@@ -124,21 +124,21 @@ function Home(props) {
                         <div className="col-lg-4 col-md-4 text-center">
                             <div className="single-banner">
                                 <a href="#">
-                                    <img src="https://image.freepik.com/free-vector/fashion-banner-design-with-shirt-bag-camera-case_83728-1865.jpg" alt="Li's Static Banner" />
+                                    <img src="https://meocun.com/wp-content/uploads/banner_col_1.png" alt="Li's Static Banner" />
                                 </a>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-4 text-center pt-xs-30">
                             <div className="single-banner">
                                 <a href="#">
-                                    <img src="https://image.freepik.com/free-vector/fashion-sale-banner-collection_23-2148161688.jpg" alt="Li's Static Banner" />
+                                    <img src="https://meocun.com/wp-content/uploads/banner_col_3.png" alt="Li's Static Banner" />
                                 </a>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-4 text-center pt-xs-30">
                             <div className="single-banner">
                                 <a href="#">
-                                    <img src="https://image.freepik.com/free-vector/fashion-sale-banners_52683-11557.jpg" alt="Li's Static Banner" />
+                                    <img src="https://meocun.com/wp-content/uploads/banner_col_2.png" alt="Li's Static Banner" />
                                 </a>
                             </div>
                         </div>
@@ -146,9 +146,9 @@ function Home(props) {
                 </div>
             </div>
 
-            <Home_Product gender={`Male`} category={'60615da34c9cac0448b4b9a2'} GET_id_modal={GET_id_modal} />
+            <Home_Product gender={`Thú cưng`} category={'60615da34c9cac0448b4b9a2'} GET_id_modal={GET_id_modal} />
 
-            <Home_Product gender={`Female`} category={'60615da34c9cac0448b4b9a8'} GET_id_modal={GET_id_modal} />
+            
 
 
             <div className="modal fade modal-wrapper" id={id_modal} >
@@ -200,7 +200,7 @@ function Home(props) {
                                             </div>
                                             <div className="single-add-to-cart">
                                                 <form onSubmit={handler_addcart} className="cart-quantity">
-                                                    <button className="add-to-cart" type="submit">Add to cart</button>
+                                                    <button className="add-to-cart" type="submit">Thêm vào giỏ hàng</button>
                                                 </form>
                                             </div>
                                         </div>

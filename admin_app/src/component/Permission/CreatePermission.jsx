@@ -46,7 +46,7 @@ function CreatePermission(props) {
                     <div className="col-12">
                         <div className="card">
                             <div className="card-body">
-                                <h4 className="card-title">Create Permission</h4>
+                                <h4 className="card-title">Thêm quyền truy cập</h4>
                                 {
                                     validationMsg.api === "Bạn đã thêm thành công" ?
                                         (
@@ -70,7 +70,7 @@ function CreatePermission(props) {
                                         <p className="form-text text-danger">{validationMsg.name}</p>
                                     </div>
 
-                                    <button type="submit" className="btn btn-primary">Create</button>
+                                    <button type="submit" className="btn btn-primary">Thêm</button>
                                 </form>
                             </div>
                         </div>

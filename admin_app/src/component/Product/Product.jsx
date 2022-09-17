@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import queryString from 'query-string'
-
 import productAPI from '../Api/productAPI';
 import Pagination from '../Shared/Pagination'
 import Search from '../Shared/Search'
@@ -71,23 +70,23 @@ function Product() {
                     <div className="col-12">
                         <div className="card">
                             <div className="card-body">
-                                <h4 className="card-title">Products</h4>
+                                <h4 className="card-title">Giỏ hàng</h4>
                                 <Search handlerSearch={handlerSearch} />
 
-                                <Link to="/product/create" className="btn btn-primary my-3">New create</Link>
+                                <Link to="/product/create" className="btn btn-primary my-3">Thêm mới</Link>
 
                                 <div className="table-responsive">
                                     <table className="table table-striped table-bordered no-wrap">
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
-                                                <th>Name</th>
-                                                <th>Price</th>
-                                                <th>Image</th>
+                                                <th>Tên</th>
+                                                <th>Giá</th>
+                                                <th>Ảnh</th>
                                                 <th>Describe</th>
                                                 {/* <th>Producer</th> */}
-                                                <th>Category</th>
-                                                <th>Edit</th>
+                                                <th>Danh mục</th>
+                                                <th>Sửa</th>
                                             </tr>
                                         </thead>
 
@@ -99,13 +98,13 @@ function Product() {
                                                         <td className="name">{value.name_product}</td>
                                                         <td>{new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(value.price_product)+ ' VNĐ'}</td>
                                                         <td><img src={value.image} alt="" style={{ width: '70px' }} /></td>
-                                                        <td className="name" style={{ width: '40px' }}>{value.describe}</td>
+                                                        <td className="des" style={{ width: '40px' }}>{value.describe}</td>
                                                         <td>{value.id_category ? value.id_category.category : ""}</td>
                                                         <td>
                                                             <div className="d-flex">
-                                                                <Link to={"/product/update/" + value._id} className="btn btn-success mr-1">Update</Link>
+                                                                <Link to={"/product/update/" + value._id} className="btn btn-success mr-1">Cập nhật</Link>
 
-                                                                <button type="button" style={{ cursor: 'pointer', color: 'white' }} onClick={() => handleDelete(value._id)} className="btn btn-danger" >Delete</button>
+                                                                <button type="button" style={{ cursor: 'pointer', color: 'white' }} onClick={() => handleDelete(value._id)} className="btn btn-danger" >Xóa</button>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -123,7 +122,7 @@ function Product() {
             <footer className="footer text-center text-muted">
                 All Rights Reserved by Adminmart. Designed and Developed by <a
                     href="https://www.facebook.com/KimTien.9920/">Tiền Kim</a>.
-            </footer>
+            </footer>   
         </div>
     );
 }

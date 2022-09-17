@@ -30,14 +30,20 @@ const Coupon = require('./API/Router/admin/coupon.router')
 const Sale = require('./API/Router/admin/sale.router')
 
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://minhhieu:ZPCKa1ZMZfiAOe7w@cluster0.hrvuv.mongodb.net/Clothes?retryWrites=true&w=majority", {
+// mongoose.connect("mongodb+srv://minhhieu:ZPCKa1ZMZfiAOe7w@cluster0.hrvuv.mongodb.net/Clothes?retryWrites=true&w=majority", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// }).then(() => {
+//   console.log('kết nối csdl thành công ')
+// })
+mongoose.connect("mongodb+srv://tuanhoang:123@cluster0.zz9qwro.mongodb.net/Clothes?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
-  console.log('Connected to database ')
+  console.log('kết nối csdl thành công ')
 })
   .catch((err) => {
-    console.error(`Error connecting to the database. \n${err}`);
+    console.error(`thất bại. \n${err}`);
   });
 
 

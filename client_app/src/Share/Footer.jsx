@@ -67,51 +67,51 @@ function Footer(props) {
                         <div className="row">
                             <div className="col-lg-4 col-md-6">
                                 <div className="footer-logo">
-                                    <img src={Global.Logo} style={{ width: '20rem'}} alt="Footer Logo" />
+                                    <img src={Global.Logo} style={{ width: '100px',height:'100px' }} alt="Footer Logo" />
                                     <p className="info">
                                         We are a team of designers and developers that create high quality HTML Template & Woocommerce, Shopify Theme.
-                                </p>
+                                    </p>
                                 </div>
                                 <ul className="des">
                                     <li>
                                         <span>Address: </span>
-                                    828 Sư Vạn Hạnh, Quận 10, TP.HCM
-                                </li>
+                                        174 Trần Phú, Thành phố Huế
+                                    </li>
                                     <li>
                                         <span>Phone: </span>
-                                        <a href="#">0763557366</a>
+                                        <a href="#">0946535271 - 0799357537</a>
                                     </li>
                                     <li>
                                         <span>Email: </span>
-                                        <a href="mailto://tienkim9920@gmail.com">tienkim9920@gmail.com</a>
+                                        <a href="mailto://khanhquoc2920@gmail.com">khanhquoc2920@gmail.com</a>
                                     </li>
                                 </ul>
                             </div>
-                                <div className="col-lg-2 col-md-3 col-sm-6">
-                                    <div className="footer-block">
-                                        <h3 className="footer-block-title">Product</h3>
-                                        <ul>
-                                            <li><a href="#">Prices drop</a></li>
-                                            <li><a href="#">New products</a></li>
-                                            <li><a href="#">Best sales</a></li>
-                                            <li><a href="#">Contact us</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                             <div className="col-lg-2 col-md-3 col-sm-6">
                                 <div className="footer-block">
-                                    <h3 className="footer-block-title">Our company</h3>
-                                        <ul>
-                                            <li><a href="#">Delivery</a></li>
-                                            <li><a href="#">Legal Notice</a></li>
-                                            <li><a href="#">About us</a></li>
-                                            <li><a href="#">Contact us</a></li>
-                                      </ul>
+                                    <h3 className="footer-block-title">Sản phẩm</h3>
+                                    <ul>
+                                        <li><a href="#">Giảm giá</a></li>
+                                        <li><a href="#">Sản phẩm mới</a></li>
+                                        <li><a href="#">Sản phẩm tốt nhất</a></li>
+                                        <li><a href="#">Liên hệ chúng tôi</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div className="col-lg-4">  
+                            <div className="col-lg-2 col-md-3 col-sm-6">
+                                <div className="footer-block">
+                                    <h3 className="footer-block-title">Về chúng tôi</h3>
+                                    <ul>
+                                        <li><a href="#">Vận chuyển</a></li>
+                                        <li><a href="#">Về luật mua hàng</a></li>
+                                        <li><a href="#">Về chúng tôi</a></li>
+                                        <li><a href="#">Liên hệ chúng tôi</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="col-lg-4">
                                 <div className="footer-newsletter">
-                                    <h4>Sign up to newsletter</h4>
+                                    <h4>Nhận tin tức mới nhất của shop</h4>
                                     <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="footer-subscribe-form validate" target="_blank">
                                         <div id="mc_embed_signup_scroll">
                                             <div id="mc-form" className="mc-form subscribe-form form-group" >

@@ -8,7 +8,7 @@ import "./CSS/slick.css";
 import "./CSS/venobox.css";
 import "./CSS/style.css";
 import "./App.css";
-
+import React  from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./Share/Header";
 // import Home from "./Home/Home";
@@ -117,7 +117,7 @@ const Search = lazy(() => {
 
 function App() {
   return (
-    <div className="App">
+      <div className="App">
       <BrowserRouter>
         <Header />
         <Suspense

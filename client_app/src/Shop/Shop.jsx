@@ -120,7 +120,7 @@ function Shop(props) {
 
             // gender = male
             const params_male = {
-                gender: 'male'
+                gender: 'Thú cưng'
             }
 
             const query_male = '?' + queryString.stringify(params_male)
@@ -131,7 +131,7 @@ function Shop(props) {
 
             // gender = female
             const params_female = {
-                gender: 'female'
+                gender: 'Phụ kiện'
             }
 
             const query_female = '?' + queryString.stringify(params_female)
@@ -167,7 +167,7 @@ function Shop(props) {
                 <div className="container">
                     <div className="breadcrumb-content">
                         <ul>
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html">Trang chủ</a></li>
                             <li className="active">Shop</li>
                         </ul>
                     </div>
@@ -186,13 +186,13 @@ function Shop(props) {
                                     </div>
                                 </div>
                                 <div className="li-blog-sidebar pt-25">
-                                    <h4 className="li-blog-sidebar-title">All Product</h4>
+                                    <h4 className="li-blog-sidebar-title">Tất cả sản phẩm</h4>
                                     <ul className="li-blog-archive">
-                                        <li><Link to="/shop/all" style={id === 'all' ? { cursor: 'pointer', color: '#fed700' } : { cursor: 'pointer' }}>All</Link></li>
+                                        <li><Link to="/shop/all" style={id === 'all' ? { cursor: 'pointer', color: '#fed700' } : { cursor: 'pointer' }}>Tất cả sản phẩm</Link></li>
                                     </ul>
                                 </div>
                                 <div className="li-blog-sidebar pt-25">
-                                    <h4 className="li-blog-sidebar-title">Male</h4>
+                                    <h4 className="li-blog-sidebar-title">Thú cưng</h4>
                                     <ul className="li-blog-archive">
                                         {
                                             male && male.map(value => (
@@ -204,15 +204,13 @@ function Shop(props) {
                                     </ul>
                                 </div>
                                 <div className="li-blog-sidebar">
-                                    <h4 className="li-blog-sidebar-title">Female</h4>
+                                    <h4 className="li-blog-sidebar-title">Phụ kiện</h4>
                                     <ul className="li-blog-archive">
-                                        {
-                                            female && female.map(value => (
-                                                <li key={value._id}>
-                                                    <Link to={`/shop/${value._id}`} style={id === value._id ? { cursor: 'pointer', color: '#fed700' } : { cursor: 'pointer' }}>{value.category}</Link>
-                                                </li>
-                                            ))
-                                        }
+                                       <li style={{color :'#a5a5a5'}}>Dây đeo</li>
+                                       <li style={{color :'#a5a5a5'}}>Thức ăn</li>
+                                       <li style={{color :'#a5a5a5'}}>Áo quần</li>
+                                       <li style={{color :'#a5a5a5'}}>Đồ trang trí</li>
+                                       <li style={{color :'#a5a5a5'}}>Đồ chơi</li>
                                     </ul>
                                 </div>
                             </div>
@@ -221,11 +219,11 @@ function Shop(props) {
                             <div className="shop-top-bar">
                                 <div className="product-select-box">
                                     <div className="product-short">
-                                        <p>Sort By:</p>
+                                        <p>Sắp xếp theo:</p>
                                         <select className="nice-select">
-                                            <option value="trending">Relevance</option>
-                                            <option value="rating">Price (Low &gt; High)</option>
-                                            <option value="rating">Price (High &gt; Low)</option>
+                                            <option value="trending">Liên quan</option>
+                                            <option value="rating">Giá (Thấp &gt; Cao)</option>
+                                            <option value="rating">Giá (Cao &gt; Thấp)</option>
                                         </select>
                                     </div>
                                 </div>
@@ -240,7 +238,7 @@ function Shop(props) {
                                     <div className="paginatoin-area">
                                         <div className="row">
                                             <div className="col-lg-6 col-md-6">
-                                                <p>Showing 1-9 of 9 item(s)</p>
+                                                <p>Hiển thị 1-9 trên 9 sản phẩm(s)</p>
                                             </div>
                                             <Pagination pagination={pagination} handlerChangePage={handlerChangePage} totalPage={totalPage} />
                                         </div>

@@ -37,9 +37,9 @@ import UpdateUserCus from './component/UserCus/UpdateUserCus'
 import Order from './component/Order/Order'
 import DetailOrder from './component/Order/DetailOrder'
 import ConfirmOrder from './component/Order/ConfirmOrder'
-import Delivery from './component/Order/Delivery'
-import ConfirmDelivery from './component/Order/ConfirmDelivery'
-import CompletedOrder from './component/Order/CompletedOrder'
+// import Delivery from './component/Order/Delivery'
+// import ConfirmDelivery from './component/Order/ConfirmDelivery'
+// import CompletedOrder from './component/Order/CompletedOrder'
 import CancelOrder from './component/Order/CancelOrder'
 import Login from './component/Login/Login';
 import NotFound from './component/NotFound/NotFound';
@@ -96,9 +96,9 @@ function App() {
             <Route exact path='/order' component={Order} />
             <Route path='/order/detail/:id' component={DetailOrder} />
             <Route path='/confirmorder' component={ConfirmOrder} />
-            <Route path='/delivery' component={Delivery} />
+            {/* <Route path='/delivery' component={Delivery} />
             <Route path='/confirmdelivery' component={ConfirmDelivery} />
-            <Route path='/completedorder' component={CompletedOrder} />
+            <Route path='/completedorder' component={CompletedOrder} /> */}
             <Route path='/cancelorder' component={CancelOrder} />
 
             <Route exact path='/coupon' component={Coupon} />

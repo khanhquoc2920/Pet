@@ -37,22 +37,8 @@ function Menu() {
             item: "ConfirmOrder",
             permission: "Nhân Viên"
         },
-        {
-            item: "Delivery",
-            permission: "Nhân Viên"
-        },
-        {
-            item: "ConfirmDelivery",
-            permission: "Nhân Viên"
-        },
-        {
-            item: "CompletedOrder",
-            permission: "Nhân Viên"
-        },
-        {
-            item: "CancelOrder",
-            permission: "Nhân Viên"
-        },
+       
+        
         {
             item: "User",
             permission: "Admin"
@@ -84,12 +70,12 @@ function Menu() {
 
                                         <li className="list-divider"></li>
 
-                                        <li className="nav-small-cap"><span className="hide-menu">Components</span></li>
+                                        <li className="nav-small-cap"><span className="hide-menu">Danh mục</span></li>
 
 
                                         <li className="sidebar-item"> <a className="sidebar-link has-arrow" href="#"
                                             aria-expanded="false"><i data-feather="grid" className="feather-icon"></i><span
-                                                className="hide-menu">Tables </span></a>
+                                                className="hide-menu"></span></a>
                                             <ul aria-expanded="false" className="collapse  first-level base-level-line">
                                                 {
                                                     menu && menu.map((item, index) => (

@@ -85,7 +85,7 @@ function Search(props) {
                                                             <Link to={`/detail/${value._id}`}>
                                                                 <img src={value.image} alt="Li's Product Image" />
                                                             </Link>
-                                                            <span className="sticker">New</span>
+                                                            <span className="sticker">Mới</span>
                                                         </div>
                                                     </div>
                                                     <div className="col-lg-5 col-md-7">
@@ -116,7 +116,7 @@ function Search(props) {
                                                     <div className="col-lg-4">
                                                         <div className="shop-add-action mb-xs-30">
                                                             <ul className="add-actions-link">
-                                                                <li className="add-cart"><a href="#">Add to cart</a></li>
+                                                                <li className="add-cart"><a href="#">Thêm vào giỏ hàng</a></li>
                                                                 <li className="wishlist"><a href="wishlist.html"><i className="fa fa-heart-o" />Add to wishlist</a></li>
                                                                 <li><a className="quick-view" data-toggle="modal" data-target={`#${value._id}`} href="#"><i className="fa fa-eye" />Quick view</a></li>
                                                             </ul>
@@ -178,14 +178,14 @@ function Search(props) {
                                                         <div className="single-add-to-cart">
                                                             <form action="#" className="cart-quantity">
                                                                 <div className="quantity">
-                                                                    <label>Quantity</label>
+                                                                    <label>Số lượng</label>
                                                                     <div className="cart-plus-minus">
                                                                         <input className="cart-plus-minus-box" value="1" type="text" />
                                                                         <div className="dec qtybutton"><i className="fa fa-angle-down"></i></div>
                                                                         <div className="inc qtybutton"><i className="fa fa-angle-up"></i></div>
                                                                     </div>
                                                                 </div>
-                                                                <button className="add-to-cart" type="submit">Add to cart</button>
+                                                                <button className="add-to-cart" type="submit">Thêm vào giỏ hàng</button>
                                                             </form>
                                                         </div>
                                                     </div>

@@ -43,7 +43,7 @@ function Products(props) {
                                 <div className="product_desc_info">
                                     <div className="product-review">
                                         <h5 className="manufacturer">
-                                            <a href="product-details.html">{value.name_product}</a>
+                                            <a href="product-details.html"></a>
                                         </h5>
                                         <div className="rating-box">
                                             <ul className="rating">
@@ -55,7 +55,9 @@ function Products(props) {
                                             </ul>
                                         </div>
                                     </div>
-                                    <h4><a className="product_name" href="single-product.html">Accusantium dolorem1</a></h4>
+                                    <Link to={`/detail/${value._id}`}>
+                                    <h4><a className="product_name" href="single-product.html">{value.name_product}</a></h4>
+                                    </Link>
                                     <div className="price-box">
                                         <span className="new-price">{new Intl.NumberFormat('vi-VN',{style: 'decimal',decimal: 'VND'}).format(value.price_product)+ ' VNĐ'}</span>
                                     </div>

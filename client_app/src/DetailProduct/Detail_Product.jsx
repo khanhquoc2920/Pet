@@ -256,31 +256,31 @@ function Detail_Product(props) {
                                     </div>
                                     <div className="product-desc">
                                         <p>
-                                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel harum tenetur delectus nam quam assumenda? Soluta vitae tempora ratione excepturi doloremque, repudiandae ullam, eum corporis, itaque dolor aperiam enim aspernatur.
+                                            <span>{product.describe}
                                             </span>
                                         </p>
                                     </div>
                                     <div className="product-variants">
                                         <div className="produt-variants-size">
-                                            <label>Size</label>
+                                            <label>Giống</label>
                                             <select className="nice-select" onChange={(e) => set_size(e.target.value)}>
-                                                <option value="S">S</option>
-                                                <option value="M">M</option>
-                                                <option value="L">L</option>
+                                                <option value="S">Lai</option>
+                                                <option value="M">Thuần chủng</option>
+                                                
                                             </select>
                                         </div>
                                     </div>
                                     <div className="single-add-to-cart">
                                         <form action="#" className="cart-quantity">
                                             <div className="quantity">
-                                                <label>Quantity</label>
+                                                <label>Số lượng</label>
                                                 <div className="cart-plus-minus">
                                                     <input className="cart-plus-minus-box" value={count} type="text" onChange={(e) => set_count(e.target.value)} />
                                                     <div className="dec qtybutton" onClick={downCount}><i className="fa fa-angle-down"></i></div>
                                                     <div className="inc qtybutton" onClick={upCount}><i className="fa fa-angle-up"></i></div>
                                                 </div>
                                             </div>
-                                            <a href="#" className="add-to-cart" type="submit" onClick={handler_addcart}>Add to cart</a>
+                                            <a href="#" className="add-to-cart" type="submit" onClick={handler_addcart}>Thêm vào giỏ hàng</a>
                                         </form>
                                     </div>
                                 </div>
@@ -296,8 +296,8 @@ function Detail_Product(props) {
                         <div className="col-lg-12">
                             <div className="li-product-tab">
                                 <ul className="nav li-product-menu">
-                                    <li><a className="active" data-toggle="tab" href="#description"><span>Description</span></a></li>
-                                    <li><a data-toggle="tab" href="#reviews"><span>Reviews</span></a></li>
+                                    <li><a className="active" data-toggle="tab" href="#description"><span>Mô tả chi tiết</span></a></li>
+                                    <li><a data-toggle="tab" href="#reviews"><span>Phản hồi</span></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -305,7 +305,8 @@ function Detail_Product(props) {
                     <div className="tab-content">
                         <div id="description" className="tab-pane active show" role="tabpanel">
                             <div className="product-description">
-                                <span>The best is yet to come! Give your walls a voice with a framed poster. This aesthethic, optimistic poster will look great in your desk or in an open-space office. Painted wooden frame with passe-partout for more depth.</span>
+                                <span>Với slogan “My Dog is family, my dog is not a pet” mang ý nghĩa rằng: “Chó là thành viên trong gia đình, không chỉ là thú cưng”. Dogily Petshop cam kết luôn đặt sức khỏe và cuộc sống của các bé chó mèo lên trên hết trong toàn bộ hoạt động của thương hiệu.
+ Petshop là một trong những đơn vị đầu tiên tại Việt Nam xây dựng thành công hệ sinh thái khép kín gồm trang trại chó mèo cảnh, cửa hàng thức ăn và phụ kiện thú cưng, phòng khám thú y, spa chó mèo,… Với chuỗi các cơ sở chất lượng cao đặt tại Hà Nội, TP. HCM, Đà Lạt. </span>
                             </div>
                         </div>
                         <div id="reviews" className="tab-pane" role="tabpanel">
@@ -331,21 +332,21 @@ function Detail_Product(props) {
                                     </div>
 
                                     <div className="review-btn" style={{ marginTop: '2rem' }}>
-                                        <a className="review-links" style={{ cursor: 'pointer', color: '#fff' }} onClick={() => set_modal(true)}>Write Your Review!</a>
+                                        <a className="review-links" style={{ cursor: 'pointer', color: '#fff' }} onClick={() => set_modal(true)}>Viết phản hồi </a>
                                     </div>
                                     <Modal onHide={() => set_modal(false)} show={modal} className="modal fade modal-wrapper">
                                         <div className="modal-dialog modal-dialog-centered" role="document">
                                             <div className="modal-content">
                                                 <div className="modal-body">
-                                                    <h3 className="review-page-title">Write Your Review</h3>
+                                                    <h3 className="review-page-title">Viết phản hồi của bạn</h3>
                                                     <div className="modal-inner-area row">
                                                         <div className="col-lg-6">
                                                             <div className="li-review-product">
-                                                                <img src={product.image} alt="Li's Product" style={{ width: '20rem' }} />
+                                                                <img src="https://go.yolo.vn/wp-content/uploads/2019/08/hinh-anh-cho-pomsky-dep-45.jpg" alt="Li's Product" style={{ width: '20rem' }} />
                                                                 <div className="li-review-product-desc">
-                                                                    <p className="li-product-name">Today is a good day Framed poster</p>
+                                                                    <p className="li-product-name">Viêt phản hồi của bạn tại đây</p>
                                                                     <p>
-                                                                        <span>Beach Camera Exclusive Bundle - Includes Two Samsung Radiant 360 R3 Wi-Fi Bluetooth Speakers. Fill The Entire Room With Exquisite Sound via Ring Radiator Technology. Stream And Control R3 Speakers Wirelessly With Your Smartphone. Sophisticated, Modern Design </span>
+                                                                        <span>Rosepet là trang trại chuyên nhập khẩu và nhân giống các dòng chó cảnh cao cấp như Akita Inu, Shiba Inu, Alaska Malamute, Husky, Samoyed, Bull, Border Collie, Malinois, Becgie…</span>
                                                                     </p>
                                                                 </div>
                                                             </div>
@@ -354,10 +355,10 @@ function Detail_Product(props) {
                                                             <div className="li-review-content">
                                                                 <div className="feedback-area">
                                                                     <div className="feedback">
-                                                                        <h3 className="feedback-title">Our Feedback</h3>
+                                                                        <h3 className="feedback-title">Đánh giá</h3>
                                                                         <form action="#">
                                                                             <p className="your-opinion">
-                                                                                <label>Your Rating</label>
+                                                                                <label>Bình chọn</label>
                                                                                 <span>
                                                                                     <select className="star-rating" onChange={(e) => set_star(e.target.value)}>
                                                                                         <option value="1">1</option>
@@ -377,8 +378,8 @@ function Detail_Product(props) {
                                                                             </p>
                                                                             <div className="feedback-input">
                                                                                 <div className="feedback-btn pb-15">
-                                                                                    <a className="close" onClick={() => set_modal(false)}>Close</a>
-                                                                                    <a style={{ cursor: 'pointer' }} onClick={handler_Comment}>Submit</a>
+                                                                                    <a className="close" onClick={() => set_modal(false)}>Đóng</a>
+                                                                                    <a style={{ cursor: 'pointer' }} onClick={handler_Comment}>Gửi</a>
                                                                                 </div>
                                                                             </div>
                                                                         </form>

@@ -64,7 +64,7 @@ module.exports.create = async (req, res) => {
 
             fileImage.mv('./public/img/' + fileName)
         }
-        else newProduct.image = 'http://localhost:8000/img/nophoto.jpg'
+        else newProduct.image = 'http://localhost:8000/public/img/?gidzl=4geVPOd3f6iKlHjXYjwdRnUu7skHZAXl0UL7Dvw6hsu7j1TdczseQGUr5JVCrQXgKB4UPpMeK8uyYCsaQG'
 
         newProduct.save();
         res.json({ msg: "Bạn đã thêm thành công" })
@@ -118,7 +118,7 @@ module.exports.update = async (req, res) => {
                 // number: req.body.number,
                 describe: req.body.description,
                 gender: req.body.gender,
-                image: fileProduct
+                image: "http://localhost:8000/" + fileProduct
             }, function (err, res) {
                 if (err) return res.json({ msg: err });
             });

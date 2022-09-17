@@ -166,7 +166,7 @@ function SignUp(props) {
                     <div className="breadcrumb-content">
                         <ul>
                             <li><Link to="/">Home</Link></li>
-                            <li className="active">Register</li>
+                            <li className="active">Đăng kí</li>
                         </ul>
                     </div>
                 </div>
@@ -177,24 +177,24 @@ function SignUp(props) {
                         <div className="col-sm-12 col-md-12 col-lg-6 col-xs-12 mr_signin">
                             <form action="#">
                                 <div className="login-form">
-                                    <h4 className="login-title">Register</h4>
+                                    <h4 className="login-title">Đăng kí tài khoản</h4>
                                     <div className="row">
                                         <div className="col-md-12 mb-20">
                                             <label>Email *</label>
                                             <input className="mb-0" type="text" placeholder="Email" value={email} onChange={(e) => set_email(e.target.value)} />
                                             {
-                                                errorEmail && <span style={{ color: 'red' }}>* Email is required!</span>
+                                                errorEmail && <span style={{ color: 'red' }}>* Email không hợp lệ!</span>
                                             }  
                                         </div>
                                         <div className="col-md-12 mb-20">
-                                            <label>Full Name *</label>
+                                            <label>Họ tên *</label>
                                             <input className="mb-0" type="text" placeholder="First Name" value={fullname} onChange={(e) => set_fullname(e.target.value)} />
                                             {
                                                 errorFullname && <span style={{ color: 'red' }}>* Fullname is required!</span>
                                             }  
                                         </div>
                                         <div className="col-md-12 mb-20">
-                                            <label>Username *</label>
+                                            <label>Tên đăng nhập *</label>
                                             <input className="mb-0" type="text" placeholder="Username" value={username} onChange={(e) => set_username(e.target.value)} />
                                             {
                                                 errorUsername && <span style={{ color: 'red' }}>* Username is required!</span>
@@ -204,29 +204,29 @@ function SignUp(props) {
                                             }
                                         </div>
                                         <div className="col-md-6 mb-20">
-                                            <label>Password *</label>
+                                            <label>Mật khẩu *</label>
                                             <input className="mb-0" type="password" placeholder="Password" value={password} onChange={(e) => set_password(e.target.value)} />
                                             {
                                                 errorPassword && <span style={{ color: 'red' }}>* Password is required!</span>
                                             }
                                         </div>
                                         <div className="col-md-6 mb-20">
-                                            <label>Confirm Password *</label>
+                                            <label>Xác nhận lại mật khẩu *</label>
                                             <input className="mb-0" type="password" placeholder="Confirm Password" value={confirm} onChange={(e) => set_confirm(e.target.value)} />
                                             {
-                                                errorConfirm && <span style={{ color: 'red' }}>* Confirm Password is required!</span>
+                                                errorConfirm && <span style={{ color: 'red' }}>* Xác nhận lại mật khẩu sai!</span>
                                             }
                                             {
-                                                errorCheckPass && <span style={{ color: 'red' }}>* Checking Again Confirm Password!</span>
+                                                errorCheckPass && <span style={{ color: 'red' }}>* Kiểm tra lại xác nhận mật khẩu!</span>
                                             }
                                         </div>
                                         <div className="col-md-12 mb-20">
                                             <div className="d-flex justify-content-end">
-                                                <Link to="/signin">Do You Want To Login?</Link>
+                                                <Link to="/signin">Đăng nhập ngay</Link>
                                             </div>
                                         </div>
                                         <div className="col-12">
-                                            <button className="register-button mt-0" style={{ cursor: 'pointer' }} onClick={handler_signup}>Register</button>
+                                            <button className="register-button mt-0" style={{ cursor: 'pointer' }} onClick={handler_signup}>Đăng kí</button>
                                         </div>
                                     </div>
                                 </div>

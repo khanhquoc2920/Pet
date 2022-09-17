@@ -57,7 +57,7 @@ function CancelOrder(props) {
                     <div className="col-12">
                         <div className="card">
                             <div className="card-body">
-                                <h4 className="card-title">Cancel Order</h4>
+                                <h4 className="card-title">Hủy đơn hàng</h4>
                                 <h4 className="card-title">TotalMoney: {totalMoney}$</h4>
                                 <Search handlerSearch={handlerSearch} />
 
@@ -66,14 +66,14 @@ function CancelOrder(props) {
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
-                                                <th>Name</th>
+                                                <th>Tên</th>
                                                 <th>Email</th>
-                                                <th>Phone</th>
-                                                <th>Address</th>
-                                                <th>Status</th>
-                                                <th>Total Money</th>
-                                                <th>Payment</th>
-                                                <th>Action</th>
+                                                <th>Số điện thoại</th>
+                                                <th>Địa chỉ</th>
+                                                <th>Tình trạng</th>
+                                                <th>Tổng tiền</th>
+                                                <th>Thanh toán</th>
+                                                <th>Hành động</th>
                                             </tr>
                                         </thead>
 
@@ -101,7 +101,7 @@ function CancelOrder(props) {
                                                         <td className="name">{value.pay === true ? "Đã thanh toán" : "Chưa thanh toán"}</td>
                                                         <td>
                                                             <div className="d-flex">
-                                                                <Link to={"/order/detail/" + value._id} className="btn btn-info mr-1">Detail</Link>
+                                                                <Link to={"/order/detail/" + value._id} className="btn btn-info mr-1">Chi tiết</Link>
 
                                                             </div>
                                                         </td>
