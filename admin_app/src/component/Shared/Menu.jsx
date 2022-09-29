@@ -10,6 +10,10 @@ function Menu() {
 
     const [menu, setMenu] = useState([
         {
+            item: "Dashboard",
+            permission: "Admin"
+        },
+        {
             item: "Customer",
             permission: "Nhân Viên"
         },
@@ -19,7 +23,7 @@ function Menu() {
         },
         {
             item: "Product",
-            permission: "Nhân Viên"
+            permission: "Admin"
         },
         {
             item: "Sale",
@@ -27,11 +31,11 @@ function Menu() {
         },
         {
             item: "Category",
-            permission: "Nhân Viên"
+            permission: "Admin"
         },
         {
             item: "Order",
-            permission: "Nhân Viên"
+            permission: "Admin"
         },
         {
             item: "ConfirmOrder",

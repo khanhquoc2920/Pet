@@ -275,7 +275,7 @@ function Detail_Product(props) {
                                             <div className="quantity">
                                                 <label>Số lượng</label>
                                                 <div className="cart-plus-minus">
-                                                    <input className="cart-plus-minus-box" value={count} type="text" onChange={(e) => set_count(e.target.value)} />
+                                                    <input className="cart-plus-minus-box" value={count} type="text" onChange={(e) => set_count(e.target.value)} readOnly/>
                                                     <div className="dec qtybutton" onClick={downCount}><i className="fa fa-angle-down"></i></div>
                                                     <div className="inc qtybutton" onClick={upCount}><i className="fa fa-angle-up"></i></div>
                                                 </div>

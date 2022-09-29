@@ -50,7 +50,7 @@ import UpdateCoupon from './component/Conpon/UpdateCoupon';
 import Sale from './component/Sale/Sale';
 import CreateSale from './component/Sale/CreateSale';
 import UpdateSale from './component/Sale/UpdateSale';
-
+import Dashboard from './component/Dashboard/Dashboard';
 function App() {
   return (
     <AuthContextProvider>
@@ -63,7 +63,7 @@ function App() {
 
           <Switch>
             <Route exact path='/' component={Login} />
-
+            <Route exact path='/dashboard' component={Dashboard} />
             <Route exact path='/customer' component={UserCus} />
             <Route path='/customer/create' component={CreateUserCus} />
             <Route path='/customer/update/:id' component={UpdateUserCus} />

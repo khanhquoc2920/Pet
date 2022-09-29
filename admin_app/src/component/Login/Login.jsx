@@ -61,7 +61,7 @@ function Login(props) {
     if (jwt && user && user.id_permission.permission === "Nhân Viên") {
         return <Redirect to="/customer" />
     } else if (jwt && user && user.id_permission.permission === "Admin") {
-        return <Redirect to="/user" />
+        return <Redirect to="/Dashboard" />
     }
 
     return (
